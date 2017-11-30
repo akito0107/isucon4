@@ -12,7 +12,7 @@ import (
 var (
 	DummyUsersTSVMD5     string
 	DummyUsersUsedTSVMD5 string
-	DebugMode  string
+	DebugMode            string
 )
 
 var DummyUsers []*User
@@ -30,15 +30,15 @@ func init() {
 		usersUsedTsvPath = "/home/isucon/sql/dummy_users_used.tsv"
 	}
 
-	duMD5 := getMD5(usersTsvPath)
-	if duMD5 != DummyUsersTSVMD5 {
-		panic(fmt.Errorf("Broken %s", usersTsvPath))
-	}
+	//duMD5 := getMD5(usersTsvPath)
+	//if duMD5 != DummyUsersTSVMD5 {
+	//	panic(fmt.Errorf("Broken %s", usersTsvPath))
+	//}
 
-	duuMD5 := getMD5(usersUsedTsvPath)
-	if duuMD5 != DummyUsersUsedTSVMD5 {
-		panic(fmt.Errorf("Broken %s", usersUsedTsvPath))
-	}
+	//duuMD5 := getMD5(usersUsedTsvPath)
+	//if duuMD5 != DummyUsersUsedTSVMD5 {
+	//	panic(fmt.Errorf("Broken %s", usersUsedTsvPath))
+	//}
 
 	DummyUsers = make([]*User, 0)
 	failureMap := map[string]string{}
